@@ -1,0 +1,188 @@
+body{
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	display: grid;
+	grid-template-areas:
+		"fejlec"
+		"tartalom"
+		"lablec"
+	;
+	grid-template-rows: max-content 1fr max-content;
+	min-height: 100vh;
+}
+header{
+	grid-area: fejlec;
+}
+main{
+	grid-area: tartalom;
+}
+footer{
+	grid-area: lablec;
+}
+
+header{
+	line-height: 2rem;
+	font-size: 1.2rem;
+	padding: 1rem 1rem;
+	text-align: left;
+	position: relative;
+}
+.menu_gomb{
+	cursor: pointer;
+	background-color: #326489;
+	width: 7.5rem;
+	text-align: center;
+	border-radius: 0.2rem;
+	color: #ffffff;
+	font-weight: 400;
+	user-select: none;
+}
+
+#lenyilo_menu{
+	position: absolute;
+	left: 1rem;
+	top: 3rem;
+	display: none;
+	background-color: #326489;
+	color: #ffffff;
+	border-radius: 0.2rem;
+	border: 1px solid #ffffff;
+	text-align: center;
+	width: 10rem;
+	max-height: max-content;
+}
+#lenyilo_menu.latszodik{
+	display: block;
+}
+.menu{
+	cursor: pointer;
+	user-select: none;
+	line-height: 2rem;
+}
+.menu:hover{
+	background-color: #ffffff;
+	border-radius: 0.2rem;
+	padding: 0.1rem;
+	color: #326489;
+}
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+.racs{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 2rem;
+	margin: 2rem;
+}
+
+
+.kartya .kep{
+	height: 20rem;
+	background-color: #326489;
+	border-radius: 0.5rem;
+	text-align: center;
+	overflow: hidden;
+}
+.kartya .kep img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+.tom{
+	text-align: center;
+	object-fit: contain;
+}
+.racs2{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+		". terv1 terv21 ."
+		". terv1 terv22 ."
+		". terv1 terv23 ."
+		". terv1 terv24 ."		
+	;
+	grid-gap: 2rem;
+}
+.racs1{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+		". terv1 terv21 ."	
+	;
+	grid-gap: 2rem;
+}
+.racs2_szoveg{
+	grid-area: terv1;
+}
+.racs1_szoveg{
+	grid-area: terv1;
+	text-align: justify;
+	font-size: 20px;
+	background-color: #e3e6e8;
+	padding: 2rem;
+	border-radius: 2rem;
+}
+.racs21_kepek{
+	grid-area: terv21;
+}
+.racs22_kepek{
+	grid-area: terv22;
+}
+.racs23_kepek{
+	grid-area: terv23;
+}
+.racs24_kepek{
+	grid-area: terv24;
+}
+.racs21_kepek img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	border-radius: 2rem;
+	overflow: hidden;
+	background-color: #e3e6e8;
+	padding: 1rem;
+}
+.racs22_kepek img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	border-radius: 2rem;
+	overflow: hidden;
+	background-color: #e3e6e8;
+	padding: 1rem;
+}
+.racs23_kepek img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	border-radius: 2rem;
+	overflow: hidden;
+	background-color: #e3e6e8;
+	padding: 1rem;
+}
+.racs24_kepek img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	border-radius: 2rem;
+	overflow: hidden;
+	background-color: #e3e6e8;
+	padding: 1rem;
+}
+.racs2_szoveg{
+	font-size: 20px;
+	text-align: justify;
+	background-color: #e3e6e8;
+	padding: 2rem;
+	border-radius: 2rem;
+}
